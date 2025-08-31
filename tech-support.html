@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>探花浏览器 - 技术支持文档</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f7;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #007AFF;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .app-name {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #007AFF;
+            margin-bottom: 15px;
+        }
+        
+        .app-version {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .app-description {
+            font-size: 1rem;
+            color: #555;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #007AFF;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #007AFF;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-icon {
+            font-size: 1.5rem;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .tech-title {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .tech-desc {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        
+        .tech-details {
+            background: #f1f3f4;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            color: #333;
+            margin-top: 10px;
+        }
+        
+        .compliance-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: white;
+            margin-bottom: 10px;
+            border-radius: 6px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .compliance-icon {
+            font-size: 1.5rem;
+            color: #34C759;
+        }
+        
+        .compliance-content h4 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .compliance-content p {
+            color: #666;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .architecture-diagram {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .architecture-box {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 15px 25px;
+            margin: 10px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .arrow {
+            font-size: 1.5rem;
+            color: #007AFF;
+            margin: 0 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e9ecef;
+            color: #666;
+        }
+        
+        .contact-info {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .contact-info h3 {
+            color: #1976d2;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #bbdefb;
+        }
+        
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-label {
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .contact-value {
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部信息 -->
+        <div class="header">
+            <h1 class="app-name">探花浏览器</h1>
+            <p class="app-version">版本: 1.0.0 | 平台: iOS 14.0+</p>
+            <p class="app-description">
+                多引擎一键切换，百度、必应随心换，搜索更全面；悬浮预加载播放器，看视频不中断；长截图 + 精准裁剪 + 一键截图，编辑超省心。支持搜索历史、收藏，搭配无痕 + 私密模式，隐私有保障。
+            </p>
+        </div>
+
+        <!-- 技术架构 -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🏗️</span>
+                技术架构
+            </h2>
+            
+            <div class="architecture-diagram">
+                <div class="architecture-box">用户界面层</div>
+                <div class="arrow">↓</div>
+                <div class="architecture-box">业务逻辑层</div>
+                <div class="arrow">↓</div>
+                <div class="architecture-box">数据访问层</div>
+                <div class="arrow">↓</div>
+                <div class="architecture-box">系统服务层</div>
+            </div>
+            
+
+        </div>
+
+
+
+        <!-- 合规性说明 -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">✅</span>
+                合规性说明
+            </h2>
+            
+            <div class="compliance-item">
+                <div class="compliance-icon">🔒</div>
+                <div class="compliance-content">
+                    <h4>隐私政策合规</h4>
+                    <p>提供完整的隐私政策，明确说明数据收集、使用和存储方式</p>
+                </div>
+            </div>
+            
+            <div class="compliance-item">
+                <div class="compliance-icon">📱</div>
+                <div class="compliance-content">
+                    <h4>App Store 审核指南</h4>
+                    <p>严格遵循苹果应用审核指南，确保应用质量和用户体验</p>
+                </div>
+            </div>
+            
+            <div class="compliance-item">
+                <div class="compliance-icon">🌐</div>
+                <div class="compliance-content">
+                    <h4>网络内容合规</h4>
+                    <p>通过 WebKit 框架访问网络内容，遵循苹果的安全策略</p>
+                </div>
+            </div>
+            
+            <div class="compliance-item">
+                <div class="compliance-icon">🎬</div>
+                <div class="compliance-content">
+                    <h4>媒体播放合规</h4>
+                    <p>使用 AVFoundation 框架，支持后台音频播放，符合 iOS 规范</p>
+                </div>
+            </div>
+            
+            <div class="compliance-item">
+                <div class="compliance-icon">📸</div>
+                <div class="compliance-content">
+                    <h4>截图功能合规</h4>
+                    <p>仅截取应用内内容，不涉及系统级截图，符合隐私保护要求</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 性能优化 -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🚀</span>
+                性能优化
+            </h2>
+            
+            <div class="tech-item">
+                <div class="tech-title">内存管理</div>
+                <div class="tech-desc">采用 ARC 内存管理，避免内存泄漏和过度占用</div>
+                <div class="tech-details">
+                    内存监控: Instruments 内存分析
+                    图片缓存: NSCache + 自动清理
+                    视图复用: TableView/CollectionView 优化
+                    后台任务: 合理使用后台任务标识
+                </div>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-title">网络优化</div>
+                <div class="tech-desc">智能缓存策略，减少网络请求，提升加载速度</div>
+                <div class="tech-details">
+                    缓存策略: URLCache + 自定义缓存
+                    请求优化: 并发控制 + 超时设置
+                    图片加载: SDWebImage + 渐进式加载
+                    预加载: 智能预加载算法
+                </div>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-title">电池优化</div>
+                <div class="tech-desc">合理使用系统资源，延长设备续航时间</div>
+                <div class="tech-details">
+                    定位服务: 按需使用 + 及时停止
+                    后台任务: 最小化后台活动
+                    网络请求: 批量处理 + 智能调度
+                    动画优化: Core Animation + 硬件加速
+                </div>
+            </div>
+        </div>
+
+        <!-- 测试与质量保证 -->
+        <div class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🧪</span>
+                测试与质量保证
+            </h2>
+            
+            <div class="tech-item">
+                <div class="tech-title">测试覆盖</div>
+                <div class="tech-desc">全面的测试策略，确保应用稳定性和用户体验</div>
+                <div class="tech-details">
+                    单元测试: XCTest + 90%+ 代码覆盖率
+                    集成测试: UI 自动化测试
+                    性能测试: Instruments + 性能基准
+                    兼容性测试: iOS 14.0 - 17.0 全版本支持
+                </div>
+            </div>
+            
+            <div class="tech-item">
+                <div class="tech-title">崩溃监控</div>
+                <div class="tech-desc">集成崩溃监控系统，及时发现和修复问题</div>
+                <div class="tech-details">
+                    监控工具: Crashlytics + 自定义监控
+                    错误分类: 按严重程度分类处理
+                    修复流程: 快速响应 + 版本迭代
+                    用户反馈: 内置反馈机制
+                </div>
+            </div>
+        </div>
+
+        <!-- 联系方式 -->
+        <div class="contact-info">
+            <h3>技术支持联系方式</h3>
+            <div class="contact-item">
+                <span class="contact-label">开发者邮箱:</span>
+                <span class="contact-value">sparkingquran@outlook.com</span>
+            </div>
+
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p><strong>探花浏览器</strong> - 技术支持文档</p>
+            <p>本文档用于苹果应用市场审核，详细说明应用的技术实现和合规性</p>
+            <p>© 2024 探花浏览器团队. 保留所有权利.</p>
+        </div>
+    </div>
+</body>
+</html>
